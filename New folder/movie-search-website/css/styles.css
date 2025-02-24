@@ -1,0 +1,212 @@
+/* === Global Styles === */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #1b1d2e; /* Dark theme default */
+    color: #ffffff;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* === Header === */
+header {
+    background: #011028;
+    color: #ffffff;
+    padding: 15px 0;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 4px rgba(8, 99, 152, 0.708);
+}
+
+h1 {
+    margin: 0;
+    font-size: 2rem;
+    letter-spacing: 1px;
+}
+
+/* === Search Bar === */
+.search-container {
+    margin: 20px auto;
+    text-align: center;
+}
+
+input[type="text"] {
+    width: 300px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+input[type="text"]:focus {
+    border-color: #45a049;
+}
+
+/* === Buttons === */
+button {
+    padding: 10px 15px;
+    border: none;
+    background-color: #0e3d5a;
+    color: #ffffff;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin: 5px;
+}
+
+button:hover {
+    background-color: #037c09;
+}
+
+/* === Theme Toggle Button === */
+#theme-toggle {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color: #0e3d5a;
+    padding: 8px 12px;
+    font-size: 14px;
+    border-radius: 50px;
+    transition: background-color 0.3s;
+}
+
+#theme-toggle:hover {
+    background-color: #45a049;
+}
+
+/* === Main Content === */
+main {
+    padding: 20px;
+}
+
+section {
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+/* === Movie List Layout === */
+#movie-list, #recent-movie-list {
+    display: flex;
+    flex-wrap: wrap;      /* Allows wrapping to next line */
+    justify-content: center; /* Centers movie cards */
+    gap: 15px;            /* Space between cards */
+    padding: 10px;
+}
+
+/* === Movie Cards === */
+.movie {
+    background-color: #060f28;
+    border: 1px solid #444;
+    border-radius: 10px;
+    padding: 15px;
+    width: 200px;
+    height: 280px;        /* Adjusted height */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+    transition: background-color 0.3s, color 0.3s, transform 0.3s;
+}
+
+.movie:hover {
+    transform: translateY(-10px); /* Hover lift effect */
+    box-shadow: 0 4px 8px rgba(3, 134, 166, 0.722);
+}
+
+/* Movie Image */
+.movie img {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    object-fit: cover;
+    transition: transform 0.3s;
+}
+
+.movie img:hover {
+    transform: scale(1.1);
+}
+
+/* Movie Title */
+.movie h3 {
+    margin: 5px 0;
+    font-size: 1.1em;
+    font-weight: bold;
+}
+
+/* Movie Description */
+.movie p {
+    margin: 5px 0;
+    font-size: 0.9em;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;             /* Enables flex-like behavior */
+    -webkit-box-orient: vertical;     /* Sets the box orientation */
+    -webkit-line-clamp: 3;            /* Limits text to 3 lines */
+    line-clamp: 3;                    /* Standard property (for future support) */
+}
+
+/* Movie Link */
+.movie a {
+    color: #45a049;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.movie a:hover {
+    text-decoration: underline;
+}
+
+/* === Light Theme Styles === */
+body.light-theme {
+    background-color: #f4f4f4;
+    color: #ffffff;
+}
+
+/* Light Theme Styles for h2 Headings */
+body.light-theme h2 {
+    text-align: center;
+    font-size: 1.8em;
+    margin-bottom: 15px;
+    color: #35424a; /* Adjusted to a darker shade for light theme */
+    transition: color 0.3s ease; /* Smooth transition when switching themes */
+}
+
+header.light-theme {
+    background: #35424a;
+    color: #ffffff;
+}
+
+button.light-theme {
+    background-color: #007bff;
+    color: #ffffff;
+}
+
+button.light-theme:hover {
+    background-color: #0056b3;
+}
+
+#theme-toggle.light-theme {
+    background-color: #007bff;
+}
+
+#theme-toggle.light-theme:hover {
+    background-color: #0056b3;
+}
+
+.movie.light-theme {
+    background-color: #ffffff;
+    border: 1px solid #ccc;
+}
+
+input[type="text"].light-theme {
+    border: 1px solid #ffffff;
+}
+
+input[type="text"].light-theme:focus {
+    border-color: #007bff;
+}
